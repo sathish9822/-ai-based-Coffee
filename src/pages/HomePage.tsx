@@ -96,7 +96,7 @@ export function HomePage() {
               </Link>
               <Link to="/auth">
                 <Button variant="outline" size="lg" className="text-lg px-8 py-4 bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white/20">
-                  Order Now
+                 place Order Now
                 </Button>
               </Link>
             </div>
