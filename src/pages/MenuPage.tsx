@@ -113,6 +113,14 @@ export function MenuPage() {
     try {
       setLoading(true);
       
+      // Check if Supabase is properly configured
+      if (!import.meta.env.VITE_SUPABASE_URL || !import.meta.env.VITE_SUPABASE_ANON_KEY) {
+        console.warn('Supabase environment variables not configured, using sample data');
+        setItems(sampleItems);
+        toast.error('Using sample data - Supabase not configured');
+        return;
+      }
+
       const { data, error } = await supabase
         .from('coffee_items')
         .select('*')

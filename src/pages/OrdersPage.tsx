@@ -5,6 +5,9 @@ import { useAuth } from '../contexts/AuthContext';
 import { Order } from '../types';
 import { LoadingSpinner } from '../components/UI/LoadingSpinner';
 
+import { supabase } from '../lib/supabase';
+import toast from 'react-hot-toast';
+
 export function OrdersPage() {
   const [orders, setOrders] = useState<Order[]>([]);
   const [loading, setLoading] = useState(true);
