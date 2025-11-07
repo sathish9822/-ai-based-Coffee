@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Clock, CheckCircle, Coffee, Package, AlertCircle } from 'lucide-react';
+import { Clock, CircleCheck as CheckCircle, Coffee, Package, CircleAlert as AlertCircle } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { Order } from '../types';
 import { LoadingSpinner } from '../components/UI/LoadingSpinner';
